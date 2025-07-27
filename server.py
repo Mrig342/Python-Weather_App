@@ -27,9 +27,12 @@ def get_weather():
     return render_template(
         "weather.html",
         title=weather_data['location']['name'],
-        status=weather_data['current']['weather_descriptions'],
+        status=weather_data['current']['weather_descriptions'][0],
         temp=f"{weather_data['current']['temperature']:.1f}",
         feels_like=f"{weather_data['current']['feelslike']:.1f}",
+        pressure=f"{weather_data['current']['pressure']}",
+        wind_speed=f"{weather_data['current']['wind_speed']}",
+        humidity=f"{weather_data['current']['humidity']}",
     )
 
 if __name__ =="__main__":

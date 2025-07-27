@@ -10,8 +10,12 @@
 <body>
     
     <h1>{{ title}} Weather</h1>
-    <p> {{ status }} and {{ temp }} &deg;</p>
-    <p> Feels like {{ feels_like }} &deg;</p>
+    <p> Weather Status: {{ status }}</p>
+    <p> Temperature: {{ temp }} &deg;C</p>
+    <p> Feels like: {{ feels_like }} &deg;C</p>
+    <p> Atmospheric Pressure: {{ pressure }} millibars</p>
+    <p> Wind Speed: {{ wind_speed }} mph</p>
+    <p> Humidity: {{ humidity }}%</p>
     
     <form action="/weather">
         <input type="text" name="city" id="city" placeholder="Enter the City name:" />
